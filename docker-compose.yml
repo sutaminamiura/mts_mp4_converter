@@ -1,0 +1,7 @@
+version: '2'
+services:
+        converter:
+                build: ./
+                volumes: 
+                        - ./:/workdir
+                command: sh convert.sh
