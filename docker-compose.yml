@@ -1,7 +1,10 @@
 version: '2'
 services:
         converter:
-                build: ./
+                build: 
+                        context: ./
+                        args:
+                                - http_proxy=${http_proxy}
                 volumes: 
                         - ./:/workdir
                 command: sh convert.sh
